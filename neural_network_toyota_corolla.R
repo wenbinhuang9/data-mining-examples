@@ -9,7 +9,6 @@ summary(car.df)
 dim(car.df)
 #preprocessing
 #find an outlier in CC 
-ccoutlier <- car.df[car.df$CC==16000,]
 #remove this invalid outlier
 car.df<- car.df[car.df$CC!=16000,]
 
@@ -104,7 +103,5 @@ diff.df
 
 library(forecast)
 accuracy(predict.df$predict.recover, carvalid.df$Price)
-
-
 
 
